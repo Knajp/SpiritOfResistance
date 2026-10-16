@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/lenovo/dev/game/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/main.cpp.o -c /home/lenovo/dev/game/src/main.cpp",
+  "file": "/home/lenovo/dev/game/src/main.cpp",
+  "output": "CMakeFiles/sor.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/lenovo/dev/game/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Window.cpp.o -c /home/lenovo/dev/game/src/Window.cpp",
+  "file": "/home/lenovo/dev/game/src/Window.cpp",
+  "output": "CMakeFiles/sor.dir/src/Window.cpp.o"
+},
+{
+  "directory": "/home/lenovo/dev/game/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Game.cpp.o -c /home/lenovo/dev/game/src/Game.cpp",
+  "file": "/home/lenovo/dev/game/src/Game.cpp",
+  "output": "CMakeFiles/sor.dir/src/Game.cpp.o"
+}
+]

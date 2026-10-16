@@ -1,0 +1,3 @@
+/home/lenovo/dev/game/build/CMakeFiles/sor.dir
+/home/lenovo/dev/game/build/CMakeFiles/edit_cache.dir
+/home/lenovo/dev/game/build/CMakeFiles/rebuild_cache.dir
