@@ -114,11 +114,56 @@ CMakeFiles/sor.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sor.dir/src/Game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/dev/game/src/Game.cpp -o CMakeFiles/sor.dir/src/Game.cpp.s
 
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o: CMakeFiles/sor.dir/flags.make
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o: /home/lenovo/dev/game/src/Rend/Renderer.cpp
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o: CMakeFiles/sor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/dev/game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o -MF CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o.d -o CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o -c /home/lenovo/dev/game/src/Rend/Renderer.cpp
+
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sor.dir/src/Rend/Renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenovo/dev/game/src/Rend/Renderer.cpp > CMakeFiles/sor.dir/src/Rend/Renderer.cpp.i
+
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sor.dir/src/Rend/Renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/dev/game/src/Rend/Renderer.cpp -o CMakeFiles/sor.dir/src/Rend/Renderer.cpp.s
+
+CMakeFiles/sor.dir/src/Logger.cpp.o: CMakeFiles/sor.dir/flags.make
+CMakeFiles/sor.dir/src/Logger.cpp.o: /home/lenovo/dev/game/src/Logger.cpp
+CMakeFiles/sor.dir/src/Logger.cpp.o: CMakeFiles/sor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/dev/game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sor.dir/src/Logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sor.dir/src/Logger.cpp.o -MF CMakeFiles/sor.dir/src/Logger.cpp.o.d -o CMakeFiles/sor.dir/src/Logger.cpp.o -c /home/lenovo/dev/game/src/Logger.cpp
+
+CMakeFiles/sor.dir/src/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sor.dir/src/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenovo/dev/game/src/Logger.cpp > CMakeFiles/sor.dir/src/Logger.cpp.i
+
+CMakeFiles/sor.dir/src/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sor.dir/src/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/dev/game/src/Logger.cpp -o CMakeFiles/sor.dir/src/Logger.cpp.s
+
+CMakeFiles/sor.dir/src/vma.cpp.o: CMakeFiles/sor.dir/flags.make
+CMakeFiles/sor.dir/src/vma.cpp.o: /home/lenovo/dev/game/src/vma.cpp
+CMakeFiles/sor.dir/src/vma.cpp.o: CMakeFiles/sor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenovo/dev/game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sor.dir/src/vma.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sor.dir/src/vma.cpp.o -MF CMakeFiles/sor.dir/src/vma.cpp.o.d -o CMakeFiles/sor.dir/src/vma.cpp.o -c /home/lenovo/dev/game/src/vma.cpp
+
+CMakeFiles/sor.dir/src/vma.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sor.dir/src/vma.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenovo/dev/game/src/vma.cpp > CMakeFiles/sor.dir/src/vma.cpp.i
+
+CMakeFiles/sor.dir/src/vma.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sor.dir/src/vma.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenovo/dev/game/src/vma.cpp -o CMakeFiles/sor.dir/src/vma.cpp.s
+
 # Object files for target sor
 sor_OBJECTS = \
 "CMakeFiles/sor.dir/src/main.cpp.o" \
 "CMakeFiles/sor.dir/src/Window.cpp.o" \
-"CMakeFiles/sor.dir/src/Game.cpp.o"
+"CMakeFiles/sor.dir/src/Game.cpp.o" \
+"CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o" \
+"CMakeFiles/sor.dir/src/Logger.cpp.o" \
+"CMakeFiles/sor.dir/src/vma.cpp.o"
 
 # External object files for target sor
 sor_EXTERNAL_OBJECTS =
@@ -126,6 +171,9 @@ sor_EXTERNAL_OBJECTS =
 sor: CMakeFiles/sor.dir/src/main.cpp.o
 sor: CMakeFiles/sor.dir/src/Window.cpp.o
 sor: CMakeFiles/sor.dir/src/Game.cpp.o
+sor: CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o
+sor: CMakeFiles/sor.dir/src/Logger.cpp.o
+sor: CMakeFiles/sor.dir/src/vma.cpp.o
 sor: CMakeFiles/sor.dir/build.make
 sor: CMakeFiles/sor.dir/compiler_depend.ts
 sor: /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/VulkanLoader/lib/libvulkan.so
@@ -138,7 +186,7 @@ sor: /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/libglslang.a
 sor: /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/libSPIRV-Tools-opt.a
 sor: /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/libSPIRV-Tools.a
 sor: CMakeFiles/sor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lenovo/dev/game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lenovo/dev/game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable sor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

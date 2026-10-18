@@ -165,4 +165,10 @@ CMakeFiles/sor.dir/src/main.cpp.o: /home/lenovo/dev/game/src/main.cpp \
  /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include/vk_video/vulkan_video_codec_vp9std_decode.h \
  /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include/vk_video/vulkan_video_codec_vp9std.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h
+ /usr/include/KHR/khrplatform.h \
+ /home/lenovo/dev/game/src/Rend/Renderer.hpp \
+ /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include/volk/volk.h \
+ /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include/vulkan/vulkan_core.h \
+ /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include/vma/vk_mem_alloc.h \
+ /usr/include/c++/16/optional \
+ /usr/include/c++/16/bits/enable_special_members.h

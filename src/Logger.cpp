@@ -25,7 +25,7 @@ void Logger::init()
                   
                   auto logger = std::make_shared<spdlog::logger>("Game", sinks.begin(), sinks.end());
 
-                  logger->set_pattern("[%Y-%m-%d %H:%M:%S.%e [%^%l%S] [thread %t] %v" );
+                  logger->set_pattern("[%Y-%m-%d %H:%M:%S.%e [%^%l%$] %v");
 
                   logger->set_level(spdlog::level::debug);
                   logger->flush_on(spdlog::level::warn);

@@ -10,6 +10,7 @@ void Game::init()
   Logger::init();
   Window::initializeGLFW();
   mWindow.initWindow();
+  mRenderer.initRenderer(); 
 }
 
 void Game::gameplayLoop()

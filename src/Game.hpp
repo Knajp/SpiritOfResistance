@@ -2,7 +2,7 @@
 #define GAME_HPP
 
 #include "Window.hpp"
-
+#include "Rend/Renderer.hpp"
 namespace game
 {
 class Game
@@ -27,6 +27,7 @@ private:
 
 private:
   Window mWindow;
+  Renderer mRenderer = Renderer::getInstance();
 
 };
 }

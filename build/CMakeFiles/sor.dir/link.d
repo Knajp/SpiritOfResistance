@@ -5,6 +5,9 @@ sor: \
   CMakeFiles/sor.dir/src/main.cpp.o \
   CMakeFiles/sor.dir/src/Window.cpp.o \
   CMakeFiles/sor.dir/src/Game.cpp.o \
+  CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o \
+  CMakeFiles/sor.dir/src/Logger.cpp.o \
+  CMakeFiles/sor.dir/src/vma.cpp.o \
   /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/VulkanLoader/lib/libvulkan.so \
   /usr/lib/libglfw.so.3.5 \
   /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/libglslang.a \
@@ -58,6 +61,12 @@ CMakeFiles/sor.dir/src/main.cpp.o:
 CMakeFiles/sor.dir/src/Window.cpp.o:
 
 CMakeFiles/sor.dir/src/Game.cpp.o:
+
+CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o:
+
+CMakeFiles/sor.dir/src/Logger.cpp.o:
+
+CMakeFiles/sor.dir/src/vma.cpp.o:
 
 /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/VulkanLoader/lib/libvulkan.so:
 

@@ -4,7 +4,7 @@
 #include <map>
 #include <cassert>
 #include <set>
-
+#include "../Logger.hpp"
 
 namespace game
 {
@@ -50,7 +50,12 @@ void Renderer::createDebugMessenger()
   };
 
   if(vkCreateDebugUtilsMessengerEXT(mInstance, &createInfo, nullptr, &mDebugMessenger) != VK_SUCCESS)
-    throw std::runtime_error("Failed to create debug utils messenger!");
+  {
+    spdlog::error("Failed to create Debug Utils Messenger.");
+    throw std::runtime_error("err");
+  }
+
+  spdlog::info("Created Debug Utils Messenger");
 }
 void Renderer::createVulkanInstance()
 {
@@ -60,15 +65,17 @@ void Renderer::createVulkanInstance()
     .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,  
     .applicationVersion = VK_MAKE_VERSION(1, 0, 0),
     .pEngineName = "None",
+    .engineVersion = VK_MAKE_VERSION(1,0,0),
     .apiVersion = VK_API_VERSION_1_4,
-    .engineVersion = VK_MAKE_VERSION(0,0,0),
   };
 
   uint32_t glfwExtensionCount = 0;
   const char** glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
   if(!glfwExtensions)
-    throw std::runtime_error("Failed to get GLFW Vulkan extensions!");
-
+  {
+    spdlog::error("Failed to get required GLFW instance extensions");
+    throw std::runtime_error("err"); 
+  }
   for(uint32_t i = 0; i < glfwExtensionCount; i++)
       instanceExtensions.push_back(glfwExtensions[i]);
 
@@ -85,9 +92,16 @@ void Renderer::createVulkanInstance()
   };
 
   if(vkCreateInstance(&createInfo, nullptr, &mInstance) != VK_SUCCESS)
-    throw std::runtime_error("Failed to create vulkan instance!");
+  {
+    spdlog::critical("FAILED TO CREATE VULKAN INSTANCE!");
+    throw std::runtime_error("crit-err");
+  }
+
+  spdlog::info("Created Vulkan instance");
 
   volkLoadInstance(mInstance);
+
+  spdlog::info("Volk loaded instance");
 }
 
 void Renderer::initializeVMA()
@@ -104,7 +118,11 @@ void Renderer::initializeVMA()
   vmaImportVulkanFunctionsFromVolk(&vmaAllocInfo, &vmaFuncInfo);
 
   if(vmaCreateAllocator(&vmaAllocInfo, &mVmaAllocator) != VK_SUCCESS)
-    throw std::runtime_error("Failed to create VMA allocator!");
+  {
+    spdlog::critical("FAILED TO CREATE VMA ALLOCATOR!");
+    throw std::runtime_error("crit-err");
+  }
+  spdlog::info("Created VMA allocator");
 }
 bool checkDeviceExtensionSupport(VkPhysicalDevice device)
 {
@@ -138,9 +156,9 @@ void Renderer::pickPhysicalDevice()
   {
     int score = 0;
 
-    VkPhysicalDeviceFeatures2 features{};
+    VkPhysicalDeviceFeatures2 features{.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2};
     vkGetPhysicalDeviceFeatures2(device, &features);
-    VkPhysicalDeviceProperties2 properties{};
+    VkPhysicalDeviceProperties2 properties{.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2};
     vkGetPhysicalDeviceProperties2(device, &properties);
 
     if(!features.features.geometryShader)
@@ -159,8 +177,7 @@ void Renderer::pickPhysicalDevice()
 
   if(candidates.rbegin()->first > 0)
     mPhysicalDevice = candidates.rbegin()->second;
-  else throw(std::runtime_error("Failed to find a suitable GPU!"));
-
+  else {spdlog::error("No suitable GPU found on client!"); throw std::runtime_error("err");}
 }
 
 RenderUtil::QueueFamilyIndices Renderer::findFamilyIndices(VkPhysicalDevice device) {
@@ -199,8 +216,10 @@ void Renderer::createLogicalDevice()
   vkGetPhysicalDeviceFeatures2(mPhysicalDevice, &supportedFeatures11);
 
   if(!supportedFeatures13.dynamicRendering || !supportedFeatures13.synchronization2 || !supportedFeatures12.timelineSemaphore)
-    throw std::runtime_error("Physical device doesn't fulfill application Vulkan 1.X feature requirements.");
-
+  {
+    spdlog::error("Physical device doesn't fulfill application Vulkan 1.X feature requirements.");
+    throw std::runtime_error("err");
+  }
   VkPhysicalDeviceVulkan14Features features14{.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_4_FEATURES, .pNext = nullptr};
   VkPhysicalDeviceVulkan13Features features13{.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_3_FEATURES, .pNext = &features14, .synchronization2 = VK_TRUE, .dynamicRendering = VK_TRUE};
   VkPhysicalDeviceVulkan12Features features12{.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES, .pNext = &features13, .timelineSemaphore = VK_TRUE};
@@ -238,8 +257,10 @@ void Renderer::createLogicalDevice()
   };
 
   if(vkCreateDevice(mPhysicalDevice, &createInfo, nullptr, &mDevice) != VK_SUCCESS)
-    throw std::runtime_error("Failed to create logical device!");
-
+  {
+    spdlog::critical("FAILED TO CREATE LOGICAL DEVICE!");
+    throw std::runtime_error("crit-err");
+  }
   vkGetDeviceQueue(mDevice, indices.graphicsFamily.value(), 0, &mGraphicsQueue);
   vkGetDeviceQueue(mDevice, indices.transferFamily.value(), 0, &mTransferQueue);
   vkGetDeviceQueue(mDevice, indices.computeFamily.value(), 0, &mComputeQueue);

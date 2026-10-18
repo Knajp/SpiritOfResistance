@@ -153,6 +153,54 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/Logger.o: src/Logger.cpp.o
+.PHONY : src/Logger.o
+
+# target to build an object file
+src/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Logger.cpp.o
+.PHONY : src/Logger.cpp.o
+
+src/Logger.i: src/Logger.cpp.i
+.PHONY : src/Logger.i
+
+# target to preprocess a source file
+src/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Logger.cpp.i
+.PHONY : src/Logger.cpp.i
+
+src/Logger.s: src/Logger.cpp.s
+.PHONY : src/Logger.s
+
+# target to generate assembly for a file
+src/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Logger.cpp.s
+.PHONY : src/Logger.cpp.s
+
+src/Rend/Renderer.o: src/Rend/Renderer.cpp.o
+.PHONY : src/Rend/Renderer.o
+
+# target to build an object file
+src/Rend/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o
+.PHONY : src/Rend/Renderer.cpp.o
+
+src/Rend/Renderer.i: src/Rend/Renderer.cpp.i
+.PHONY : src/Rend/Renderer.i
+
+# target to preprocess a source file
+src/Rend/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Rend/Renderer.cpp.i
+.PHONY : src/Rend/Renderer.cpp.i
+
+src/Rend/Renderer.s: src/Rend/Renderer.cpp.s
+.PHONY : src/Rend/Renderer.s
+
+# target to generate assembly for a file
+src/Rend/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/Rend/Renderer.cpp.s
+.PHONY : src/Rend/Renderer.cpp.s
+
 src/Window.o: src/Window.cpp.o
 .PHONY : src/Window.o
 
@@ -201,6 +249,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/vma.o: src/vma.cpp.o
+.PHONY : src/vma.o
+
+# target to build an object file
+src/vma.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/vma.cpp.o
+.PHONY : src/vma.cpp.o
+
+src/vma.i: src/vma.cpp.i
+.PHONY : src/vma.i
+
+# target to preprocess a source file
+src/vma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/vma.cpp.i
+.PHONY : src/vma.cpp.i
+
+src/vma.s: src/vma.cpp.s
+.PHONY : src/vma.s
+
+# target to generate assembly for a file
+src/vma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sor.dir/build.make CMakeFiles/sor.dir/src/vma.cpp.s
+.PHONY : src/vma.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +285,21 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/Logger.o"
+	@echo "... src/Logger.i"
+	@echo "... src/Logger.s"
+	@echo "... src/Rend/Renderer.o"
+	@echo "... src/Rend/Renderer.i"
+	@echo "... src/Rend/Renderer.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/vma.o"
+	@echo "... src/vma.i"
+	@echo "... src/vma.s"
 .PHONY : help
 
 

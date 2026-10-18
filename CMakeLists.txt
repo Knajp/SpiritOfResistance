@@ -18,6 +18,9 @@ add_executable(sor
   src/main.cpp 
   src/Window.cpp
   src/Game.cpp
+  src/Rend/Renderer.cpp
+  src/Logger.cpp
+  src/vma.cpp
 )
 
 target_include_directories(sor PRIVATE
