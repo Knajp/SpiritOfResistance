@@ -277,7 +277,7 @@ void Renderer::createLogicalDevice()
   vkGetDeviceQueue(mDevice, indices.graphicsFamily.value(), 0, &mGraphicsQueue);
   vkGetDeviceQueue(mDevice, indices.transferFamily.value(), 0, &mTransferQueue);
   vkGetDeviceQueue(mDevice, indices.computeFamily.value(), 0, &mComputeQueue);
-  //vkGetDeviceQueue(mDevice, indices.presentFamily.value(), 0, &mPresentQueue);
+  vkGetDeviceQueue(mDevice, indices.presentFamily.value(), 0, &mPresentQueue);
 
   spdlog::info("Created logical device and acquired queues.");
 }
@@ -390,5 +390,63 @@ void Renderer::createSwapchain(GLFWwindow* window)
   }
 
   spdlog::info("Created swap chain.");
+}
+
+void Renderer::createSyncResources()
+{
+  mImageReadySemaphores.resize(MAXFRAMESINFLIGHT);
+  mRenderFinishedSemaphores.resize(MAXFRAMESINFLIGHT);
+  mInFlightFences.resize(MAXFRAMESINFLIGHT);
+
+  VkSemaphoreCreateInfo semaphoreInfo{
+    .sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO
+  };
+  VkFenceCreateInfo fenceInfo{
+    .sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO,
+    .flags = VK_FENCE_CREATE_SIGNALED_BIT 
+  };
+
+  for(int i = 0; i < MAXFRAMESINFLIGHT; i++)
+  {
+    if(vkCreateSemaphore(mDevice, &semaphoreInfo, nullptr, &mImageReadySemaphores[i]) != VK_SUCCESS ||
+       vkCreateSemaphore(mDevice, &semaphoreInfo, nullptr, &mRenderFinishedSemaphores[i]) != VK_SUCCESS ||
+       vkCreateFence(mDevice, &fenceInfo, nullptr, &mInFlightFences[i]) != VK_SUCCESS)
+    {
+      spdlog::error("Failed to create sync resource!");
+      throw std::runtime_error("err");
+    }
+  }
+}
+
+void Renderer::createCommandBuffer()
+{
+  RenderUtil::QueueFamilyIndices qfi = findFamilyIndices(mPhysicalDevice);
+
+  VkCommandPoolCreateInfo poolInfo{
+    .sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
+    .queueFamilyIndex = qfi.graphicsFamily.value()
+  };
+
+  if(vkCreateCommandPool(mDevice, &poolInfo, nullptr, &mCommandPool) != VK_SUCCESS)
+  {
+    spdlog::error("Failed to create command pool!");
+    throw std::runtime_error("err");
+  }
+
+  VkCommandBufferAllocateInfo allocInfo{
+    .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
+    .commandPool = mCommandPool,
+    .level = VK_COMMAND_BUFFER_LEVEL_PRIMARY,
+    .commandBufferCount = MAXFRAMESINFLIGHT,
+  };
+
+  mCommandBuffers.resize(MAXFRAMESINFLIGHT);
+  if(vkAllocateCommandBuffers(mDevice, &allocInfo, mCommandBuffers.data()) != VK_SUCCESS)
+  {
+    spdlog::critical("Failed to allocate command buffers!");
+    throw std::runtime_error("crit-err");
+  }
+
+  spdlog::info("Created command buffers!");
 }
 }

@@ -53,8 +53,12 @@ public:
     createLogicalDevice();
     createSwapchain(window);
     mGraphicsPipeline = createGraphicsPipeline(mGraphicsPipelineLayout, shader::ShaderTool::createShaderModule("src/shader/shader.vert", EShLangVertex, mDevice), shader::ShaderTool::createShaderModule("/src/shader/shader.frag", EShLangFragment, mDevice));
+    createSyncResources();
+    createCommandBuffer();
   }
 private:
+  constexpr static uint32_t MAXFRAMESINFLIGHT = 3;
+
   void createVulkanInstance();
   void initializeVMA();
   void createDebugMessenger();
@@ -62,6 +66,8 @@ private:
   void createLogicalDevice();
   void createWindowSurface(GLFWwindow* window);
   void createSwapchain(GLFWwindow* window);
+  void createSyncResources();
+  void createCommandBuffer();
 
   RenderUtil::QueueFamilyIndices findFamilyIndices(VkPhysicalDevice device);
   RenderUtil::SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device) const;
@@ -87,7 +93,15 @@ private:
   VkQueue mGraphicsQueue = VK_NULL_HANDLE;
   VkQueue mTransferQueue = VK_NULL_HANDLE;
   VkQueue mComputeQueue = VK_NULL_HANDLE;
-  //VkQueue mPresentQueue = VK_NULL_HANDLE;
+  VkQueue mPresentQueue = VK_NULL_HANDLE;
+  
+  VkFormat mDepthFormat{VK_FORMAT_D32_SFLOAT};
+  std::vector<VkSemaphore> mImageReadySemaphores;
+  std::vector<VkSemaphore> mRenderFinishedSemaphores;
+  std::vector<VkFence> mInFlightFences;
+
+  VkCommandPool mCommandPool;
+  std::vector<VkCommandBuffer> mCommandBuffers;
 };
 
 }

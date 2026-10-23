@@ -86,9 +86,18 @@ VkPipeline Renderer::createGraphicsPipeline(VkPipelineLayout& layout, VkShaderMo
     .pDynamicStates = dynamicStates 
   };
 
+  VkPipelineRenderingCreateInfo rendering{
+    .sType = VK_STRUCTURE_TYPE_PIPELINE_RENDERING_CREATE_INFO,
+    .pNext = nullptr,
+    .viewMask = 0,
+    .colorAttachmentCount = 1,
+    .pColorAttachmentFormats = &mSwapchainFormat.surfaceFormat.format,
+    .depthAttachmentFormat = mDepthFormat
+  };
+
   VkGraphicsPipelineCreateInfo createInfo {
     .sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO,
-    .pNext = nullptr,
+    .pNext = &rendering,
     .flags = 0,
     .stageCount = 2,
     .pStages = stages,
