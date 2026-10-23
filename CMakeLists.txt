@@ -33,7 +33,7 @@ target_link_libraries(sor PRIVATE
   glslang::glslang
   glslang::glslang-default-resource-limits
   glslang::SPIRV
-  /home/lenovo/VulkanSDK/1.4.357.0/x86_64/lib/libvolk.a
+  /home/asus/vulkan/1.4.335.0/x86_64/lib/libvolk.a
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

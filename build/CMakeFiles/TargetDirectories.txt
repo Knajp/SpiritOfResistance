@@ -1,3 +1,3 @@
-/home/lenovo/dev/game/build/CMakeFiles/sor.dir
-/home/lenovo/dev/game/build/CMakeFiles/edit_cache.dir
-/home/lenovo/dev/game/build/CMakeFiles/rebuild_cache.dir
+/home/asus/Documents/C++/SpiritOfResistance/build/CMakeFiles/sor.dir
+/home/asus/Documents/C++/SpiritOfResistance/build/CMakeFiles/edit_cache.dir
+/home/asus/Documents/C++/SpiritOfResistance/build/CMakeFiles/rebuild_cache.dir

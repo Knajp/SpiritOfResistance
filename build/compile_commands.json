@@ -1,38 +1,38 @@
 [
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/main.cpp.o -c /home/lenovo/dev/game/src/main.cpp",
-  "file": "/home/lenovo/dev/game/src/main.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/main.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/main.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/main.cpp",
   "output": "CMakeFiles/sor.dir/src/main.cpp.o"
 },
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Window.cpp.o -c /home/lenovo/dev/game/src/Window.cpp",
-  "file": "/home/lenovo/dev/game/src/Window.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Window.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/Window.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/Window.cpp",
   "output": "CMakeFiles/sor.dir/src/Window.cpp.o"
 },
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Game.cpp.o -c /home/lenovo/dev/game/src/Game.cpp",
-  "file": "/home/lenovo/dev/game/src/Game.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Game.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/Game.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/Game.cpp",
   "output": "CMakeFiles/sor.dir/src/Game.cpp.o"
 },
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o -c /home/lenovo/dev/game/src/Rend/Renderer.cpp",
-  "file": "/home/lenovo/dev/game/src/Rend/Renderer.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/Rend/Renderer.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/Rend/Renderer.cpp",
   "output": "CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o"
 },
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Logger.cpp.o -c /home/lenovo/dev/game/src/Logger.cpp",
-  "file": "/home/lenovo/dev/game/src/Logger.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/Logger.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/Logger.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/Logger.cpp",
   "output": "CMakeFiles/sor.dir/src/Logger.cpp.o"
 },
 {
-  "directory": "/home/lenovo/dev/game/build",
-  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/lenovo/dev/game/vendor/include -isystem /home/lenovo/VulkanSDK/1.4.357.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/vma.cpp.o -c /home/lenovo/dev/game/src/vma.cpp",
-  "file": "/home/lenovo/dev/game/src/vma.cpp",
+  "directory": "/home/asus/Documents/C++/SpiritOfResistance/build",
+  "command": "/usr/bin/c++ -DDEBUG -DGLFW_INCLUDE_VULKAN -DVK_NO_PROTOTYPES -I/home/asus/Documents/C++/SpiritOfResistance/vendor/include -isystem /home/asus/vulkan/1.4.335.0/x86_64/include -g -std=c++20 -o CMakeFiles/sor.dir/src/vma.cpp.o -c /home/asus/Documents/C++/SpiritOfResistance/src/vma.cpp",
+  "file": "/home/asus/Documents/C++/SpiritOfResistance/src/vma.cpp",
   "output": "CMakeFiles/sor.dir/src/vma.cpp.o"
 }
 ]

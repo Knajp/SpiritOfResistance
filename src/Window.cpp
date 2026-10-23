@@ -13,7 +13,6 @@ bool Window::initializeGLFW()
   init = true;
 
   glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-  glfwWindowHint(GLFW_PLATFORM, GLFW_PLATFORM_WAYLAND);
 
   return true;
 }

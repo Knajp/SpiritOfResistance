@@ -16,7 +16,8 @@ public:
 
   void initWindow();
   void terminateWindow();
-
+  
+  GLFWwindow* getHandle() const {return pWindow;}
   bool getWindowShouldClose() const {return glfwWindowShouldClose(pWindow);}
 private:
   GLFWwindow* pWindow = nullptr;
