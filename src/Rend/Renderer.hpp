@@ -9,6 +9,8 @@
 
 #include <optional>
 
+#include "Shader.hpp"
+
 namespace game::RenderUtil
 {
 struct QueueFamilyIndices
@@ -46,10 +48,11 @@ public:
   {
     createVulkanInstance();
     createWindowSurface(window);
-    createDebugMessenger();
+    createDebugMessenger(); 
     pickPhysicalDevice();
     createLogicalDevice();
-    createSwapchain(window); 
+    createSwapchain(window);
+    mGraphicsPipeline = createGraphicsPipeline(mGraphicsPipelineLayout, shader::ShaderTool::createShaderModule("src/shader/shader.vert", EShLangVertex, mDevice), shader::ShaderTool::createShaderModule("/src/shader/shader.frag", EShLangFragment, mDevice));
   }
 private:
   void createVulkanInstance();
@@ -62,6 +65,8 @@ private:
 
   RenderUtil::QueueFamilyIndices findFamilyIndices(VkPhysicalDevice device);
   RenderUtil::SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device) const;
+
+  VkPipeline createGraphicsPipeline(VkPipelineLayout& layout, VkShaderModule vertexShaderModule, VkShaderModule fragmentShaderModule);
 
   VkInstance mInstance = VK_NULL_HANDLE;
   VmaAllocator mVmaAllocator;
@@ -76,6 +81,8 @@ private:
   VkSurfaceFormat2KHR mSwapchainFormat;
   VkExtent2D mSwapchainExtent;
   VkPresentModeKHR mSwapchainPresentMode;
+  VkPipeline mGraphicsPipeline;
+  VkPipelineLayout mGraphicsPipelineLayout;
 
   VkQueue mGraphicsQueue = VK_NULL_HANDLE;
   VkQueue mTransferQueue = VK_NULL_HANDLE;
