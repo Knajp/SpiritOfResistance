@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/asus/Documents/C++/SpiritOfResistance/src/Game.cpp" "CMakeFiles/sor.dir/src/Game.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Game.cpp.o.d"
-  "/home/asus/Documents/C++/SpiritOfResistance/src/Logger.cpp" "CMakeFiles/sor.dir/src/Logger.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Logger.cpp.o.d"
-  "/home/asus/Documents/C++/SpiritOfResistance/src/Rend/Renderer.cpp" "CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o.d"
-  "/home/asus/Documents/C++/SpiritOfResistance/src/Window.cpp" "CMakeFiles/sor.dir/src/Window.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Window.cpp.o.d"
-  "/home/asus/Documents/C++/SpiritOfResistance/src/main.cpp" "CMakeFiles/sor.dir/src/main.cpp.o" "gcc" "CMakeFiles/sor.dir/src/main.cpp.o.d"
-  "/home/asus/Documents/C++/SpiritOfResistance/src/vma.cpp" "CMakeFiles/sor.dir/src/vma.cpp.o" "gcc" "CMakeFiles/sor.dir/src/vma.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/Game.cpp" "CMakeFiles/sor.dir/src/Game.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Game.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/Logger.cpp" "CMakeFiles/sor.dir/src/Logger.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Logger.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/Rend/Renderer.cpp" "CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Rend/Renderer.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/Window.cpp" "CMakeFiles/sor.dir/src/Window.cpp.o" "gcc" "CMakeFiles/sor.dir/src/Window.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/main.cpp" "CMakeFiles/sor.dir/src/main.cpp.o" "gcc" "CMakeFiles/sor.dir/src/main.cpp.o.d"
+  "/home/lenovo/dev/SpiritOfResistance/src/vma.cpp" "CMakeFiles/sor.dir/src/vma.cpp.o" "gcc" "CMakeFiles/sor.dir/src/vma.cpp.o.d"
+  "" "sor" "gcc" "CMakeFiles/sor.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
